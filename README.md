@@ -3,7 +3,7 @@ Operator for Dummy object
 
 ## Description
 
-This project implements a custom Kubernetes Operator using the Operator SDK and Go. The operator manages a custom resource named Dummy and demonstrates key Operator patterns:
+This project implements a custom Kubernetes Operator using the Operator SDK and Go, it has the following features:
 
 * Custom Resource Definition (CRD)
 
@@ -58,7 +58,7 @@ Fields:
 ### To Deploy on the cluster
 ```
     minikube start
-    make install
+    make kustomize 
     make deploy
     kubectl apply -f config/samples/v1alpha1_dummy.yaml
 ```
@@ -67,7 +67,6 @@ Fields:
 
 ```
     kubectl delete -f config/samples/v1alpha1_dummy.yaml
-    make uninstall
     make undeploy
 ```
 
